@@ -1,0 +1,121 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi",
+        "hello",
+        "hey",
+        "good morning",
+        "good afternoon",
+        "good evening"
+      ],
+      "responses": [
+        "Hello! How can I help you?",
+        "Hi! What can I do for you?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you",
+        "see you later",
+        "quit",
+        "exit"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "See you later!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thanks",
+        "thank you",
+        "thanks a lot",
+        "that was helpful"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!"
+      ]
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "what is your name",
+        "who are you",
+        "tell me your name"
+      ],
+      "responses": [
+        "I'm an NLP assistant built with Python, NLTK and scikit-learn."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "help",
+        "what can you do",
+        "how can you help",
+        "what tasks can you do"
+      ],
+      "responses": [
+        "I can answer basic questions, remember your name, tell the time/date, and help with simple tasks."
+      ]
+    },
+    {
+      "tag": "capabilities",
+      "patterns": [
+        "your features",
+        "what are your features",
+        "what can you do for me"
+      ],
+      "responses": [
+        "I support intent-based conversation, simple task assistance, user-name memory, and a web interface."
+      ]
+    },
+    {
+      "tag": "creator",
+      "patterns": [
+        "who created you",
+        "who made you",
+        "who built you"
+      ],
+      "responses": [
+        "I am a demonstration chatbot project built with Python NLP libraries."
+      ]
+    },
+    {
+      "tag": "joke",
+      "patterns": [
+        "tell me a joke",
+        "make me laugh",
+        "say something funny"
+      ],
+      "responses": [
+        "Why did the programmer quit his job? Because he didn't get arrays!"
+      ]
+    },
+    {
+      "tag": "weather",
+      "patterns": [
+        "what is the weather",
+        "weather today",
+        "is it raining"
+      ],
+      "responses": [
+        "I don't have a live weather service connected yet. You can add a weather API to the project."
+      ]
+    },
+    {
+      "tag": "unknown",
+      "patterns": [],
+      "responses": [
+        "I didn't understand that. Please rephrase your question."
+      ]
+    }
+  ]
+}

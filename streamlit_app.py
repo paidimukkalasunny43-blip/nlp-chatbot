@@ -32,7 +32,7 @@ if user_text:
     try:
         response, intent, confidence = bot.respond(user_text,st.session_state.session_id)
     except Exception as e:
-    response = f"Sorry, something went wrong: {e}"
+        response = f"Sorry, something went wrong: {e}"
 
     with st.chat_message("assistant"):
         st.write(response)

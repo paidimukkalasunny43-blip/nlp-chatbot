@@ -1,4 +1,5 @@
 import streamlit as st
+import uuid
 from chatbot import NLPChatbot
 
 st.set_page_config(page_title="NLP Chatbot", page_icon="🤖")
@@ -11,6 +12,8 @@ def load_bot():
     return NLPChatbot()
 
 bot = load_bot()
+if "session_id" not in st.session_state:
+    st.session_state.session_id = str(uuid.uuid4())
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -27,9 +30,9 @@ if user_text:
         st.write(user_text)
 
     try:
-        response = bot.get_response(user_text)
-    except AttributeError:
-        response = bot.respond(user_text)
+        response, intent, confidence = bot.respond(user_text,st.session_state.session_id)
+    except Exception as e:
+    response = f"Sorry, something went wrong: {e}"
 
     with st.chat_message("assistant"):
         st.write(response)

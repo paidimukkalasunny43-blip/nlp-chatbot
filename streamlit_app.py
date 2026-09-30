@@ -1,5 +1,5 @@
 import streamlit as st
-from chatbot import Chatbot
+from chatbot import NLPChatbot
 
 st.set_page_config(page_title="NLP Chatbot", page_icon="🤖")
 
@@ -8,7 +8,7 @@ st.caption("NLTK + TF-IDF + Logistic Regression")
 
 @st.cache_resource
 def load_bot():
-    return Chatbot()
+    return NLPChatbot()
 
 bot = load_bot()
 
